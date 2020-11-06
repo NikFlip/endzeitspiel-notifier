@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Endzeitspiel Notifier",
+    "version": "1.0.0",
+    "description": "Benachrichtigt dich, sobald deine Arbeit im Endzeitspiel beendet wurde",
+    "developer": {
+        "name": "Niklas Köhler",
+        "url": "https://www.niklaskoehler.de"
+    },
+    "homepage_url": "https://github.com/NikFlip/endzeitspiel-notifier",
+    "permissions": [
+        "activeTab",
+        "notifications",
+        "*://*.endzeitspiel.de/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.endzeitspiel.de/*"
+            ],
+            "js": [
+                "content-script.js"
+            ]
+        }
+    ]
+  
+  }
